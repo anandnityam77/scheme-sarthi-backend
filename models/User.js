@@ -8,14 +8,14 @@ const userSchema = new mongoose.Schema({
     aadhaar: { type: String, required: true, unique: true },
     dob: { type: Date, required: true },
     gender: { type: String, required: true },
-    category: { type: String, required: true }, // General, OBC, SC, ST, EWS
+    category: { type: String, required: true }, 
     annualIncome: { type: Number, required: true },
     state: { type: String, required: true },
     district: { type: String, required: true },
     occupation: { type: String, required: true },
-    role: { type: String, default: 'citizen' } // Can be 'citizen' or 'admin'
+    role: { type: String, default: 'citizen' } 
 }, {
-    timestamps: true // Automatically adds createdAt and updatedAt dates
+    timestamps: true 
 });
 
 module.exports = mongoose.model('User', userSchema);
